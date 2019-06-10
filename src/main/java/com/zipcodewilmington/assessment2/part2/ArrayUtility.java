@@ -3,6 +3,8 @@ package com.zipcodewilmington.assessment2.part2;
 
 import com.sun.tools.javac.util.ArrayUtils;
 
+import java.util.Arrays;
+
 public class ArrayUtility {
 
     public Integer[] merge(Integer[] array1, Integer[] array2) {
@@ -18,8 +20,22 @@ public class ArrayUtility {
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
-        return null;
+        int count = 0;
+        int length = array1.length + array2.length;
+        Integer[] result = new Integer[length];
+        result = merge(array1, array2);
+
+        System.out.println("result : " + Arrays.toString(result));
+
+        for (Integer each : result){
+            if(each == valueToEvaluate){
+                count++;
+            }
+        }
+          return count;
     }
+
+
 
     public Integer mostCommon(Integer[] array) {
         return null;
