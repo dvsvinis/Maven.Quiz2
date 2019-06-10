@@ -1,5 +1,6 @@
 package com.zipcodewilmington.assessment2.part1;
 
+//Initial
 public class WuTangConcatenator {
     public WuTangConcatenator(Integer input) {
     }
