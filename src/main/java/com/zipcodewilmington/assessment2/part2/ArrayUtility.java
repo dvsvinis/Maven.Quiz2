@@ -3,7 +3,7 @@ package com.zipcodewilmington.assessment2.part2;
 
 import com.sun.tools.javac.util.ArrayUtils;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class ArrayUtility {
 
@@ -27,18 +27,29 @@ public class ArrayUtility {
 
         System.out.println("result : " + Arrays.toString(result));
 
-        for (Integer each : result){
-            if(each == valueToEvaluate){
+        for (Integer each : result) {
+            if (each == valueToEvaluate) {
                 count++;
             }
         }
-          return count;
+        return count;
     }
-
 
 
     public Integer mostCommon(Integer[] array) {
-        return null;
+
+        int max = 0, count = 0;
+        for (int i = 0; i < array.length; i++) {
+            int num = array[i];
+            if (num == max) {
+                count++;
+            } else if (num > max) {
+                max = num;
+                count = 1;
+            }
+        }
+        return max;
     }
 
 }
+
