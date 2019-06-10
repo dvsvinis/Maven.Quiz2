@@ -42,4 +42,5 @@ public class HasEvenLengthTest {
         // then
         Assert.assertEquals(actualOutcome, expectedOutcome);
     }
+
 }

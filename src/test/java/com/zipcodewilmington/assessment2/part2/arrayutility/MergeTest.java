@@ -17,7 +17,7 @@ public class MergeTest {
     }
 
     @Test
-    public void test1() {
+    public void test() {
         //Given
         Integer[] array1 = {9};
         Integer[] array2 = {6};
