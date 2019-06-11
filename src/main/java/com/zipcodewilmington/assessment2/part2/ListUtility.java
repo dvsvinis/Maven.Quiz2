@@ -1,27 +1,40 @@
 package com.zipcodewilmington.assessment2.part2;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 public class ListUtility {
 
+    private List<Integer> utility= new ArrayList<>();
 
-    public Boolean add(int i) {
-        List<Integer> utility = new ArrayList<Integer>();
+    public Boolean add(Integer i) {
+
         return utility.add(i);
     }
 
     public Integer size() {
-        return null;
+        return utility.size();
     }
 
     public List<Integer> getUnique() {
-        return null;
+//        List<Integer> temp = new ArrayList<>();
+//        for (int i = 0; i < utility.size(); i++) {
+//            if (!temp.contains(utility.get(i))){
+//                temp.add(utility.get(i));
+//            }
+//        }
+//        return temp;
+
+        Set<Integer> set = new HashSet<>(utility);
+        utility = new ArrayList<>(set);
+        return utility;
     }
 
     public String join() {
-        return null;
+        return utility.toString().substring(1, utility.size()-1);
     }
 
     public Integer mostCommon() {
@@ -29,6 +42,7 @@ public class ListUtility {
     }
 
     public Boolean contains(Integer valueToAdd) {
-        return null;
+
+        return utility.contains(valueToAdd);
     }
 }

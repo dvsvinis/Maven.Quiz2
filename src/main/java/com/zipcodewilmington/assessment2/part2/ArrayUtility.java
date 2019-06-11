@@ -16,7 +16,16 @@ public class ArrayUtility {
     }
 
     public Integer[] rotate(Integer[] array, Integer index) {
-        return null;
+        List<Integer> temp = new ArrayList<>();
+        for (Integer i = index; i < array.length; i++){
+            temp.add(array[i]);
+        }
+        for(Integer i = 0; i < index; i++){
+            temp.add(array[i]);
+        }
+        Integer[] output = new Integer[temp.size()];
+
+        return temp.toArray(output);
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
