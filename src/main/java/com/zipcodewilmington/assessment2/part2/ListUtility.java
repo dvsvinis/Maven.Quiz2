@@ -45,11 +45,26 @@ public class ListUtility {
     }
 
     public Integer mostCommon() {
-        return null;
-    }
+        int count = 1;
+        int tempCount;
+        Integer mostCommon = utility.get(0);
+        Integer temp = 0;
+        for (int i = 0; i < (utility.size()); i++) {
+            temp = utility.get(i);
+            tempCount = 0;
+            for (int j = 1; j < utility.size(); j++) {
+                if (temp == utility.get(j))
+                    tempCount++;
+            }
+            if (tempCount > count) {
+                mostCommon = temp;
+                count = tempCount;
+            }
+        }
+        return mostCommon;
+      }
 
     public Boolean contains(Integer valueToAdd) {
-
         return utility.contains(valueToAdd);
     }
 }
