@@ -34,7 +34,14 @@ public class ListUtility {
     }
 
     public String join() {
-        return utility.toString().substring(1, utility.size()-1);
+        StringBuilder temp = new StringBuilder();
+        for (int i = 0; i < utility.size(); i++) {
+            temp.append(utility.get(i));
+            if (i < utility.size()-1) {
+                temp.append(", ");
+            }
+        }
+        return temp.toString();
     }
 
     public Integer mostCommon() {
