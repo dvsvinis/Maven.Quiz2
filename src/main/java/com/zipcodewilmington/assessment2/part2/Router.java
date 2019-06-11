@@ -24,6 +24,6 @@ public class Router {
     }
 
     public void remove(String path) {
-
+        routerMap.remove(path);
     }
 }
