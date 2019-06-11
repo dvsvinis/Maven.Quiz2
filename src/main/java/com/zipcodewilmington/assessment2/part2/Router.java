@@ -13,7 +13,7 @@ public class Router {
     }
 
     public Integer size() {
-        return null;
+        return routerMap.size();
     }
 
     public String getController(String path) {
