@@ -7,16 +7,17 @@ public class Horse implements Animal{
 
     @Override
     public String move() {
-        return "gallup";
+        return "gallop";
     }
 
     @Override
-    public int getSpeed() {
-        return 0;
+    public int getSpeed()
+    {
+        return 40;
     }
 
     @Override
     public String color() {
-        return null;
+        return "brown";
     }
 }
